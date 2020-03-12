@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  font: 100% / 200% 'Trebuchet MS';
+}
+body {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  background-color: #ffffff;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+
+form {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+form input, input{
+  padding: 1rem;
+  size: 1rem;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  border-style: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+button{
+  padding: 1rem;
+  background-color: #000;
+  color: #ffffff;
+  border-style: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+
+/* form:focus-within{
+  background: green;
+} */
+
+.user.active {
+  display: block;
+}
+.detail.active {
+  display: block;
+}
+
+/* .user{
+  display: none;
+} */
+
+.books, .detail > div{
+
+  all: unset;
+  background-color: #f6f6f6;
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+
+.book, .detail div img{
+  scroll-snap-align: start;
+
+}
+
+.user {
+  display: none;
+}
+
+img{
+  
+  padding: .1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.scene {
+  width: 100%;
+  height: 260px;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* line-height: 260px; */
+  color: #000000;
+  /* text-align: center; */
+  /* font-weight: bold; */
+  font-size: 1rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: #f6f6f6;
+}
+
+.card__face--back {
+  background: #f6f6f6;
+  transform: rotateY(180deg);
+}
+
+.userInfo{
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+.userInfo article{
+  width: 100%;
+  align-items: stretch;
+  flex-shrink: 0;
+  padding-left: 1rem;
+  background: whitesmoke;
+  color: black;
+  border-radius: 10px;
+  margin-left: 1%;
+}
+
+form label{
+  margin-bottom: 1rem;
+}
+
+.other{
+  margin-top: 15rem;
+}
+
+ul{
+  all: unset;
+  list-style-type: none;
+}
+
+
+.loader{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader img{
+  width: 10%;
+  box-shadow: unset;
+}
+
+.change{
+  background-color: black;
+  border-style: solid;
+  border-color: white;
+}
+
+.userInfo, .detail{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.user > h3{
+  padding-left: 2%;
+}
+
+h1{
+  padding-left: 2%;
+}
+
+.erase{
+  all: unset;
+  text-align: center;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+}
+
+.historyRent > img{
+  margin-top: -3rem;
+}
+
+.userInfo article > p >input{
+  border-radius: unset;
+}
+
+.lastBorrow{
+  all: unset;
+  display: flex;
+}
+
+.lastBorrow img{
+  width: 50%;
+}
+
+.eraseInfo{
+  all: unset;
+  text-align: center;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  height: 3rem;
+  width: 3rem;
+}

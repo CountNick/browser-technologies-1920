@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Developers</title>
+    <script src="./static/js/vendor/routie.min.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body>
+
+    <main>
+      
+      <section class="loginSection">
+
+        <header>
+          <h1>Welkom bij de  OBA</h1>
+        </header>
+
+      <form id="login" action="">
+        
+        <label for="uname"><b>Username: </b>
+        <input type="number" id="uname" placeholder="Enter Username" name="uname" required>
+        </label>
+        <label for="pass"><b>Password: </b>
+        <input type="password" id="pass" placeholder="Enter password" name="password" required>
+        </label>
+    
+        <!-- <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required> -->
+          
+        <button type="submit">Login</button>
+        <!-- <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label> -->
+      </form>
+      </section>
+
+      <section class="user" data-route='user'>
+        
+        <div class="userInfo"></div>
+        
+        <div class="books"></div>
+      </section>
+      <section class="detail" data-route='detail'>
+        <div class="relatedBooks"></div>
+      </section>
+
+      
+    </main>
+
+    <script type="module" src="static/js/app.js"></script>
+  </body>
+</html>
