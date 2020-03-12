@@ -1,3 +1,61 @@
+# Browser technologies
+
+## Device lab
+
+### HTC Nexus tablet
+
+Op de tablet werkt de OBA app naar behoren. Ik heb niets opgemerkt wat niet werkt.
+
+### Ipod touch
+
+Op deze browser was het ook snel afgelopen. Er was geen javascript ondersteuning en het enige dat werkte was het homescherm.
+
+### Nokia
+
+Het home scherm word getoond maar vervolgens kan je niks met de pagina. Javascript werkt schijnbaar niet in deze browser
+
+### Screenreader
+
+De wesbite werkt redelijk met een screenreader. Het login scherm geeft aan waar je een username en wachtwoord in kan vullen, en waar de login knop is. Na het inloggen word de gebruiker ook verteld wat knoppen zijn en wat er in een input type staat waar de knop zit etc. De afbeeldingen hebben geen specifike alt text dus de afbeeldignen worden niet voorgelezen zoals dit zou moeten. Ook zitten er ronde knoppen met een x in die verder geen beschrijving hebben. Misschien zou dit verbeterd kunnen worden door hier bijvoorbeeld gewoon tekst neer te zetten.
+
+### 8 feature test 
+
+1. geen afbeeldingen 
+
+    - op het moment dat de browser geen afbeeldigen kan laden gaat de layout van de website kapot
+    - Er is geen alt text die word laten zien, dus iemand die de afbeeldingen niet kan zien weet niet wat voor afbeeldingen dit zouden kunnen zijn
+    - Geen image reflow
+
+2. Custom fonts uitzetten
+
+    - Ik maakte geen gebruik van custom fonts, maar had ook nog geen fallback font, zeker iets om te verbeteren
+
+3. Kleur
+
+    - Verschillende instellingen mbt contrastinstellingen waren niet allemaal even leesbaar en zichtbaar. Zoals de achtergrond van de informatie pagina, de input fields
+
+4. Muis/trackpad
+
+    - Opzich werkt de website redelijk met tabs en zonder muis of trackpad. De verwijder knoppen krijgen alleen nog geen duidelijk getabte omlijning wat nog wel zou moeten. 
+
+5. Breedband internet
+
+    - Na het zetten van de network throttling op slow 3G werd de website toch nog redelijk snel getoond. Het duurde alleen wel even voordat de afbeeldingen getoond werden. Maar overall was dit nog wel prima.
+
+6. Javascript uitzetten 
+
+    - App werkt niet zonder javascript, omdat alles in de client met javascript word afgehandeld.
+
+7. Cookies niet accepteren
+
+    - Website werkt niet
+
+8. Local Storage
+
+    _ Routing werkt niet meer zonder local storage, dus app werkt niet meer. Je kan namelijk niet meer naar een detailpagina
+
+
+
 # Oba data editor
 *__You decide which data you share__*
 
