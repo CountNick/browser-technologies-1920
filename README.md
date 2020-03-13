@@ -2,11 +2,11 @@
 
 # Opdracht 1.2:
 
-* ## [Device lab]()
-* ## [Screenreader]()
-* ## [8 feature test]()
-* ## [Browser test]()
-* ## [To do list]()
+* ## [Device lab](https://github.com/CountNick/browser-technologies-1920#device-lab-1)
+* ## [Screenreader](https://github.com/CountNick/browser-technologies-1920#screenreader-1)
+* ## [8 feature test](https://github.com/CountNick/browser-technologies-1920#8-feature-test-1)
+* ## [Browser test](https://github.com/CountNick/browser-technologies-1920#browser-test-1)
+* ## [To do list](https://github.com/CountNick/browser-technologies-1920#to-do-list-1)
 
 ## Device lab
 
@@ -35,81 +35,95 @@ De wesbite werkt redelijk met een screenreader. Het login scherm geeft aan waar 
 
 ### 8 feature test 
 
-1. geen afbeeldingen 
+__1. geen afbeeldingen__
 
     - op het moment dat de browser geen afbeeldigen kan laden gaat de layout van de website kapot
     - Er is geen alt text die word laten zien, dus iemand die de afbeeldingen niet kan zien weet niet wat voor afbeeldingen dit zouden kunnen zijn
     - Geen image reflow
 
-2. Custom fonts uitzetten
+__2. Custom fonts uitzetten__
 
     - Ik maakte geen gebruik van custom fonts, maar had ook nog geen fallback font, zeker iets om te verbeteren
 
-3. Kleur
+__3. Kleur__
 
     - Verschillende instellingen mbt contrastinstellingen waren niet allemaal even leesbaar en zichtbaar. Zoals de achtergrond van de informatie pagina, de input fields
 
-4. Muis/trackpad
+__4. Muis/trackpad__
 
     - Opzich werkt de website redelijk met tabs en zonder muis of trackpad. De verwijder knoppen krijgen alleen nog geen duidelijk getabte omlijning wat nog wel zou moeten. 
 
-5. Breedband internet
+__5. Breedband internet__
 
     - Na het zetten van de network throttling op slow 3G werd de website toch nog redelijk snel getoond. Het duurde alleen wel even voordat de afbeeldingen getoond werden. Maar overall was dit nog wel prima.
 
-6. Javascript uitzetten 
+__6. Javascript uitzetten__
 
     - App werkt niet zonder javascript, omdat alles in de client met javascript word afgehandeld.
 
-7. Cookies niet accepteren
+__7. Cookies niet accepteren__
 
     - Website werkt niet
 
-8. Local Storage
+__8. Local Storage__
 
     - Routing werkt niet meer zonder local storage, dus app werkt niet meer. Je kan namelijk niet meer naar een detailpagina
 
 ## Browser test
 
 ### Chrome
-- De app werkt zoals deze moet werken.
+![Chrome](https://cdn.neow.in/news/images/uploaded/2014/08/chrome_medium.jpg)
+- Er vielen mij geen fouten of dingen niet werkte op. De app is dan ook wel gemaakt op deze browser
 
 ### Brave
+
+![Brave](https://seekvectorlogo.com/wp-content/uploads/2018/07/brave-software-vector-logo-small.png)
+
 - Ook op de Brave browser werkt de app naar behoren.
 
 ### Firefox
+
+![firefox](https://s.pngkit.com/png/small/194-1948261_google-chrome-microsoft-edge-mozilla-firefox-logo.png)
+
 - Op firefox werkte alles naar behoren, behalve op de detailpagina. Op het moment dat je op het boek klikt draaide de afbeelding niet meer mee.
 
 ### Opera
+
+![Opera](https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Opera_2015_icon.svg/200px-Opera_2015_icon.svg.png)
+
 - Op opera werkte de applicatie net als op Firefox prima muv de detailpagina. Hier werd de afbeelding horizontaal te veel uitgerekt.
 
 ### Safari
+
+![Safari](https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Safari_browser_logo.svg/200px-Safari_browser_logo.svg.png)
+
 - Net als op de Opera browser werd de afbeelding op de detailpagina horizontaal uitgerekt. Ook klopte de kleur van het kruisje in de verwijderknop niet deze was hier zwart inplaats van wit.
 
 
 
 ## To do list 
 
-1 - Afbeeldingen 
+__1 - Afbeeldingen__
 * alt tekst meegeven
 * vaste height en width meegeven aan afbeelding, zo breekt de layout van de website niet als iemand afbeeldingen niet kan bekijken
 * Image reflow zodat afbeeldingen niet out of the blue 
 
-2 - custom fonts 
+__2 - custom fonts__
 * Fallback fonts instellen, die op de custom font van de OBA lijken mbv font matcher
 
-3 - Kleur
+__3 - Kleur__
 * Ik heb de website door meerdere contrast checks heen gehaald en de score was opzich redelijk positief, toch vul ik dit graag nog wat aan voor bijvoorbeeld de input fields
 
-4 - Muis/ trackpad
+__4 - Muis/ trackpad__
 * Duidelijk maken als er een knop gesecteerd is met tab
 
-5 - Breedband internet
+__5 - Breedband internet__
 * Het enige wat mij hier opviel bij een langzame 3g verbinding was het extreem langzaam laden van de afbeeldingen. Zie punt 1 voor de oplossing
 
-6 - De app werkt op dit moment helemaal niet zonder javascript.* Dit ga ik oplossen dmv serverside rendering 
+__6 - De app werkt op dit moment helemaal niet zonder javascript__
+* Dit ga ik oplossen dmv serverside rendering 
 
-7 en 8 cookies en local storage
+__7 en 8 cookies en local storage__
 * Routing naar een detailpagina werkt niet meer omdat dit via local storage gaat. Ook dit ga ik oplossen dmv serverside rendering.
 
 
