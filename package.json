@@ -1,0 +1,37 @@
+{
+  "name": "oba_data_app",
+  "version": "1.0.0",
+  "description": "version of the oba app shich get rendered on the server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CountNick/browser-technologies-1920.git"
+  },
+  "keywords": [
+    "fun",
+    "oba",
+    "library",
+    "books"
+  ],
+  "author": "Nick Meijer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CountNick/browser-technologies-1920/issues"
+  },
+  "homepage": "https://github.com/CountNick/browser-technologies-1920#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-hbs": "^2.3.1",
+    "handlebars": "^4.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
