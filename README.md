@@ -67,7 +67,7 @@ De wesbite werkt redelijk met een screenreader. Het login scherm geeft aan waar 
 
 8. Local Storage
 
-    _ Routing werkt niet meer zonder local storage, dus app werkt niet meer. Je kan namelijk niet meer naar een detailpagina
+    - Routing werkt niet meer zonder local storage, dus app werkt niet meer. Je kan namelijk niet meer naar een detailpagina
 
 ## Browser test
 
@@ -81,6 +81,10 @@ De wesbite werkt redelijk met een screenreader. Het login scherm geeft aan waar 
 - Op firefox werkte alles naar behoren, behalve op de detailpagina. Op het moment dat je op het boek klikt draaide de afbeelding niet meer mee.
 
 ### Opera
+- Op opera werkte de applicatie net als op Firefox prima muv de detailpagina. Hier werd de afbeelding horizontaal te veel uitgerekt.
+
+### Safari
+- Net als op de Opera browser werd de afbeelding op de detailpagina horizontaal uitgerekt. Ook klopte de kleur van het kruisje in de verwijderknop niet deze was hier zwart inplaats van wit.
 
 
 
@@ -107,6 +111,7 @@ De wesbite werkt redelijk met een screenreader. Het login scherm geeft aan waar 
 
 7 en 8 cookies en local storage
 * Routing naar een detailpagina werkt niet meer omdat dit via local storage gaat. Ook dit ga ik oplossen dmv serverside rendering.
+
 
 # Oba data editor
 *__You decide which data you share__*
