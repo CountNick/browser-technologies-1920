@@ -1,16 +1,31 @@
 # Browser technologies
 
+# Opdracht 1.2:
+
+* ## [Device lab]()
+* ## [Screenreader]()
+* ## [8 feature test]()
+* ## [Browser test]()
+* ## [To do list]()
+
 ## Device lab
 
 ### HTC Nexus tablet
+
+![WhatsApp Image 2020-03-12 at 15 24 43](https://user-images.githubusercontent.com/47485018/76607768-cf4e7c00-6514-11ea-88b2-ba508d1fd9dc.jpeg)
 
 Op de tablet werkt de OBA app naar behoren. Ik heb niets opgemerkt wat niet werkt.
 
 ### Ipod touch
 
+![WhatsApp Image 2020-03-12 at 15 24 44](https://user-images.githubusercontent.com/47485018/76607930-1472ae00-6515-11ea-8880-227f997bcee6.jpeg)
+
 Op deze browser was het ook snel afgelopen. Er was geen javascript ondersteuning en het enige dat werkte was het homescherm.
 
 ### Nokia
+
+![WhatsApp Image 2020-03-12 at 15 24 44 (1)](https://user-images.githubusercontent.com/47485018/76607985-27857e00-6515-11ea-9637-def2ef068477.jpeg)
+
 
 Het home scherm word getoond maar vervolgens kan je niks met de pagina. Javascript werkt schijnbaar niet in deze browser
 
@@ -54,7 +69,44 @@ De wesbite werkt redelijk met een screenreader. Het login scherm geeft aan waar 
 
     _ Routing werkt niet meer zonder local storage, dus app werkt niet meer. Je kan namelijk niet meer naar een detailpagina
 
+## Browser test
 
+### Chrome
+- De app werkt zoals deze moet werken.
+
+### Brave
+- Ook op de Brave browser werkt de app naar behoren.
+
+### Firefox
+- Op firefox werkte alles naar behoren, behalve op de detailpagina. Op het moment dat je op het boek klikt draaide de afbeelding niet meer mee.
+
+### Opera
+
+
+
+## To do list 
+
+1 - Afbeeldingen 
+* alt tekst meegeven
+* vaste height en width meegeven aan afbeelding, zo breekt de layout van de website niet als iemand afbeeldingen niet kan bekijken
+* Image reflow zodat afbeeldingen niet out of the blue 
+
+2 - custom fonts 
+* Fallback fonts instellen, die op de custom font van de OBA lijken mbv font matcher
+
+3 - Kleur
+* Ik heb de website door meerdere contrast checks heen gehaald en de score was opzich redelijk positief, toch vul ik dit graag nog wat aan voor bijvoorbeeld de input fields
+
+4 - Muis/ trackpad
+* Duidelijk maken als er een knop gesecteerd is met tab
+
+5 - Breedband internet
+* Het enige wat mij hier opviel bij een langzame 3g verbinding was het extreem langzaam laden van de afbeeldingen. Zie punt 1 voor de oplossing
+
+6 - De app werkt op dit moment helemaal niet zonder javascript.* Dit ga ik oplossen dmv serverside rendering 
+
+7 en 8 cookies en local storage
+* Routing naar een detailpagina werkt niet meer omdat dit via local storage gaat. Ook dit ga ik oplossen dmv serverside rendering.
 
 # Oba data editor
 *__You decide which data you share__*
