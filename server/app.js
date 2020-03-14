@@ -45,7 +45,8 @@ async function homeRoute(req, res) {
     console.log('ooooooooooooo: ', data.results)
 
     res.render('home.hbs', {
-        books: data.results
+        books: data.results,
+        pageTitle: 'Home'
     })
   }
 
