@@ -5,22 +5,57 @@
 
 <body>
 
-{{> navbar}}
+{{> header}}
 
     <main>
         <article>    
 
-            {{#each books}}
-                <section>
-                    <img src="{{coverimages.[1]}}" alt="">
-                    <h1>{{titles.[0]}}</h1>
+            <form action="/thanks" method = "GET" data-search-form="form">
 
-                    <p>{{summaries.[0]}}</p>
-
-                </section>
+                {{!-- <input type="search" id="search" name="searchValue" placeholder="Search for a character" data-search-input="input"/> --}}
 
 
-            {{/each}}
+
+                <b>Ben je CMD student?</b><br>
+
+                    <input type="radio" id="ja" name="CMD student" value="wel CMD">
+                    
+                        <label for="ja">Ja</label><br>
+
+                    <input type="radio" id="nee" name="CMD student" value="geen CMD">
+                    
+                        <label for="nee">Nee</label><br>
+
+
+                <b>Hoe bevalt de minor je tot nu toe?</b><br>
+                    
+                    <input type="radio" id="goed" name="bevalt" value="goed te doen">
+                    
+                        <label for="goed">Goed te doen</label><br>
+                        
+                    <input type="radio" id="zwaar" name="bevalt" value="zwaar">
+                        
+                        <label for="zwaar">Zwaar, maar managable</label><br>
+                            
+                    <input type="radio" id="niet" name="bevalt" value="niet te doen">
+
+                        <label for="niet">Niet te doen</label><br>
+
+
+                <b>Had je al voorkennis over HTML, CSS en Javascript?</b><br>
+
+                    <input type="radio" id="VKja" name="voorkennis" value="wel voorkennis">
+                    
+                        <label for="VKja">Ja</label><br>
+
+                    <input type="radio" id="VKnee" name="voorkennis" value="geen voorkennis">
+                    
+                        <label for="VKnee">Nee</label><br>
+
+                <input type="submit"  value="Verstuur">
+
+            
+            </form>
             
 
         </article>
