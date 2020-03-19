@@ -21,26 +21,33 @@ app
     .get('/thanks', thanksRoute)
 
 H.registerHelpers(hbs)
-
+//get request op zelfde pagina?
 // opgeslagen data meegeven aan de homeRoute
+// save button mogelijk
 function homeRoute(req, res) {
-    fs.readFile(__dirname  + '/static/dist/tilegridJsonDataFinal_0.json', "utf8", (err, data) => {
-        if(err) throw err;
-    
-        const resultArray = JSON.parse(data)
-    
-        res.render('home.hbs', {
-            data: resultArray
-            // books: data.results,
-            // pageTitle: 'Home'
-        })
 
-    });
+    // fs.readFile(__dirname  + '/static/dist/tilegridJsonDataFinal_0.json', "utf8", (err, data) => {
+    //     if(err) throw err;
+    
+    //     const resultArray = JSON.parse(data)
+    
+    //     res.render('home.hbs', {
+    //         data: resultArray
+    //     })
+
+    // });
+
+    const data = req.query
+
+    res.render('home.hbs', {
+        data: data
+    })
+
 }
 
 function thanksRoute(req, res){
     const data = req.query
-    writeData(data)
+    // writeData(data)
 
     res.render('overview.hbs', {
         data: data

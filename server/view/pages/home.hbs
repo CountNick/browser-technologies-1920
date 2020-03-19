@@ -10,15 +10,9 @@
     <main>
         <article>    
 
-            <form action="/thanks" method = "GET" data-search-form="form">
+            <form action="/" method = "GET" data-search-form="form">
 
                 {{!-- <input type="search" id="search" name="searchValue" placeholder="Search for a character" data-search-input="input"/> --}}
-
-                {{#if (eqw data.studentAchtergrond "geen CMD")}}
-
-                {{log "olaaa: "yessss}}
-                
-                {{/if}}
 
                 <fieldset>
                 <legend><b>Ben je CMD student?</b></legend>
@@ -65,7 +59,8 @@
                 </fieldset>
                 
 
-                <input type="submit"  value="Verstuur">
+                <input type="submit"  value="opslaan">
+                <input type="submit" formaction="/thanks"  value="verstuur">
 
             
             </form>
@@ -75,7 +70,6 @@
     </main>
 
 {{> footer}}
-<script src="/js/search.js"></script>
 </body>
 
 </html>
