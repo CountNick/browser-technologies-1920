@@ -14,43 +14,49 @@
 
                 {{!-- <input type="search" id="search" name="searchValue" placeholder="Search for a character" data-search-input="input"/> --}}
 
+                <fieldset>
+                <legend><b>Ben je CMD student?</b></legend>
 
-
-                <b>Ben je CMD student?</b><br>
-
-                    <input type="radio" id="ja" name="CMD student" value="wel CMD">
+                    <label for="ja">
+                    <input type="radio" id="ja" name="studentAchtergrond" value="wel CMD">
                     
-                        <label for="ja">Ja</label><br>
-
-                    <input type="radio" id="nee" name="CMD student" value="geen CMD">
+                        Ja</label>
+                    <label for="nee">
+                    <input type="radio" id="nee" name="studentAchtergrond" value="geen CMD">
                     
-                        <label for="nee">Nee</label><br>
+                        Nee</label>
+                </fieldset>
 
-
-                <b>Hoe bevalt de minor je tot nu toe?</b><br>
+                <fieldset>
+                <legend><b>Hoe bevalt de minor je tot nu toe?</b></legend>
                     
+                    <label for="goed">
                     <input type="radio" id="goed" name="bevalt" value="goed te doen">
                     
-                        <label for="goed">Goed te doen</label><br>
-                        
+                        Goed te doen</label>
+                    <label for="zwaar">
                     <input type="radio" id="zwaar" name="bevalt" value="zwaar">
                         
-                        <label for="zwaar">Zwaar, maar managable</label><br>
-                            
+                        Zwaar, maar managable</label>
+                    <label for="niet">    
                     <input type="radio" id="niet" name="bevalt" value="niet te doen">
 
-                        <label for="niet">Niet te doen</label><br>
+                        Niet te doen</label>
+                </fieldset>
 
+                <fieldset>
+                <legend><b>Had je al voorkennis over HTML, CSS en Javascript?</b></legend>
 
-                <b>Had je al voorkennis over HTML, CSS en Javascript?</b><br>
-
+                    <label for="VKja">
                     <input type="radio" id="VKja" name="voorkennis" value="wel voorkennis">
                     
-                        <label for="VKja">Ja</label><br>
+                        Ja</label>
 
+                    <label for="VKnee">
                     <input type="radio" id="VKnee" name="voorkennis" value="geen voorkennis">
                     
-                        <label for="VKnee">Nee</label><br>
+                        Nee</label>
+                </fieldset>
 
                 <input type="submit"  value="Verstuur">
 
