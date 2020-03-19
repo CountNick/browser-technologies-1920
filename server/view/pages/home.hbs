@@ -14,15 +14,21 @@
 
                 {{!-- <input type="search" id="search" name="searchValue" placeholder="Search for a character" data-search-input="input"/> --}}
 
+                {{#if (eqw data.studentAchtergrond "geen CMD")}}
+
+                {{log "olaaa: "yessss}}
+                
+                {{/if}}
+
                 <fieldset>
                 <legend><b>Ben je CMD student?</b></legend>
 
                     <label for="ja">
-                    <input type="radio" id="ja" name="studentAchtergrond" value="wel CMD">
+                    <input type="radio" id="ja" name="studentAchtergrond" value="wel CMD" {{#if (eqw data.studentAchtergrond "wel CMD")}} checked {{/if}}>
                     
                         Ja</label>
                     <label for="nee">
-                    <input type="radio" id="nee" name="studentAchtergrond" value="geen CMD">
+                    <input type="radio" id="nee" name="studentAchtergrond" value="geen CMD" {{#if (eqw data.studentAchtergrond "geen CMD")}} checked {{/if}}>
                     
                         Nee</label>
                 </fieldset>
@@ -31,15 +37,15 @@
                 <legend><b>Hoe bevalt de minor je tot nu toe?</b></legend>
                     
                     <label for="goed">
-                    <input type="radio" id="goed" name="bevalt" value="goed te doen">
+                    <input type="radio" id="goed" name="bevalt" value="goed te doen" {{#if (eqw data.bevalt "goed te doen")}} checked {{/if}}>
                     
                         Goed te doen</label>
                     <label for="zwaar">
-                    <input type="radio" id="zwaar" name="bevalt" value="zwaar">
+                    <input type="radio" id="zwaar" name="bevalt" value="zwaar" {{#if (eqw data.bevalt "zwaar")}} checked {{/if}}>
                         
                         Zwaar, maar managable</label>
                     <label for="niet">    
-                    <input type="radio" id="niet" name="bevalt" value="niet te doen">
+                    <input type="radio" id="niet" name="bevalt" value="niet te doen" {{#if (eqw data.bevalt "niet te doen")}} checked {{/if}}>
 
                         Niet te doen</label>
                 </fieldset>
@@ -48,15 +54,16 @@
                 <legend><b>Had je al voorkennis over HTML, CSS en Javascript?</b></legend>
 
                     <label for="VKja">
-                    <input type="radio" id="VKja" name="voorkennis" value="wel voorkennis">
+                    <input type="radio" id="VKja" name="voorkennis" value="wel voorkennis" {{#if (eqw data.voorkennis "wel voorkennis")}} checked {{/if}}>
                     
                         Ja</label>
 
                     <label for="VKnee">
-                    <input type="radio" id="VKnee" name="voorkennis" value="geen voorkennis">
+                    <input type="radio" id="VKnee" name="voorkennis" value="geen voorkennis" {{#if (eqw data.voorkennis "geen voorkennis")}} checked {{/if}}>
                     
                         Nee</label>
                 </fieldset>
+                
 
                 <input type="submit"  value="Verstuur">
 

@@ -32,6 +32,7 @@
     "express": "^4.17.1",
     "express-hbs": "^2.3.1",
     "handlebars": "^4.7.3",
+    "just-handlebars-helpers": "^1.0.17",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {

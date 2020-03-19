@@ -5,12 +5,14 @@ const fetch = require('node-fetch')
 const path = require('path')
 const app = express()
 const port = process.env.PORT || 5000
-const hbs = require('express-hbs');
+const H = require('just-handlebars-helpers')
+const hbs = require('express-hbs')
 const fs = require('fs')
 
-app.engine('hbs', hbs.express4({ partialsDir: __dirname + '/view/partials' }));
+
 
 app
+    .engine('hbs', hbs.express4({ partialsDir: __dirname + '/view/partials' }))
     .use(bodyParser.urlencoded({ extended: true }))
     .set('view engine', 'hbs')
     .set('views', `${__dirname}/view/pages`)
@@ -18,16 +20,23 @@ app
     .get('/', homeRoute)
     .get('/thanks', thanksRoute)
 
+H.registerHelpers(hbs)
 
-
-    
+// opgeslagen data meegeven aan de homeRoute
 function homeRoute(req, res) {
-    console.log('rezzie: ', res)
-    res.render('home.hbs', {
-        // books: data.results,
-        // pageTitle: 'Home'
-    })
-  }
+    fs.readFile(__dirname  + '/static/dist/tilegridJsonDataFinal_0.json', "utf8", (err, data) => {
+        if(err) throw err;
+    
+        const resultArray = JSON.parse(data)
+    
+        res.render('home.hbs', {
+            data: resultArray
+            // books: data.results,
+            // pageTitle: 'Home'
+        })
+
+    });
+}
 
 function thanksRoute(req, res){
     const data = req.query
@@ -39,7 +48,7 @@ function thanksRoute(req, res){
 }
 
 function writeData(data, fileIndex = 0) {
-    fs.writeFile('server/static/dist/' + 'tilegridJsonDataFinal' +"_"+ fileIndex +".json",
+    fs.writeFile(path.join(__dirname  + '/static/dist/tilegridJsonDataFinal' +"_"+ fileIndex +".json"),
         JSON.stringify(data,null,4),
         { encoding: 'utf8', flag: 'wx'},
         function(err) {
