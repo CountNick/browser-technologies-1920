@@ -73,30 +73,34 @@
                     
                     <label for="geen">
                     
-                        <input type="checkbox" id="geen" name="geen" value="Geen">
+                        <input type="checkbox" id="geen" name="geen" value="Geen"
+                            {{#if (eqw data.geen "Geen")}} checked {{/if}}>
 
                         Ik had geen voorkennis
                     </label>
 
                     <label for="zelf">
                     
-                        <input type="checkbox" id="zelf" name="school" value="Zelfscholing">
+                        <input type="checkbox" id="zelf" name="zelfSchool" value="Zelfscholing"
+                            {{#if (eqw data.zelfSchool "Zelfscholing")}} checked {{/if}}>
 
                         Zelfscholing
                     </label>
                     <label for="school">
                     
-                        <input type="checkbox" id="school" name="school" value="School">
+                        <input type="checkbox" id="school" name="school" value="School"
+                            {{#if (eqw data.school "School")}} checked {{/if}}>
 
                         School
                     </label>
                     <label for="anders">
                     
-                        <input type="checkbox" id="anders" name="andersa" value="School">
+                        <input type="checkbox" id="anders" name="anders" value="Anders"
+                            {{#if (eqw data.anders "Anders")}} checked {{/if}}>
 
                         Anders, namelijk: 
 
-                        <input type="text" name="anders" id="anders" placeholder="vul iets in">
+                        <input type="text" name="anders" id="andersOpen" placeholder="vul iets in">
                     </label>
 
                 </fieldset>
@@ -104,9 +108,9 @@
 
                 <input type="submit" value="opslaan">
                 <input type="submit" formaction="/thanks" value="verstuur">
-
+                
                 {{#if (not (eq url ''))}}
-
+                
                 <p>Sla deze url op door hem te kopieren om later verder te gaan: </p>
                 <b class="saveLink"><i>{{url}}</i></b>
 
