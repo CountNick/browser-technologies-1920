@@ -4,9 +4,9 @@
 
 * Op dit moment heb ik doormiddel van een save knop de data in de url opgeslagen. Het formulier kan later verder worden ingevuld door de gekregen link later te bezoeken. Is dit goed genoeg als 'data tijdelijk opslaan' functie
 
-* Moet ik de core functionaliteiten en progressive enhancements verder toelichten? Ik weet niet zo goed wanneer het genoeg is. [hier](), en [hier]() te vinden
+* Moet ik de core functionaliteiten en progressive enhancements verder toelichten? Ik weet niet zo goed wanneer het genoeg is.[hier](https://github.com/CountNick/browser-technologies-1920#anonieme-enquete-over-de-minor-webdev), en [hier](https://github.com/CountNick/browser-technologies-1920#notes-over-features-en-pe) te vinden
 
-* Ik heb in mijn code dezelde progressive enhancement gebruikt als Declan, een live search. Ik heb dit alleen wel nav het voorbeeld dat door Declan gemaakt is gedaan, dus eigenlijk is de code niet echt van mij. Is het nu handiger om over te stappen op iets anders? [Dit is het stukje code waar het om gaat](https://github.com/CountNick/progressive-web-apps-1920/blob/master/server/static/js/search.js)
+* Ik weet niet zo goed hoe ik moet beginnen met het onderzoeken naar features. Ik snap dat je dingen kan testen met bijvoorbeeld @support, en natuurlijk testen in verschillende browsers opzich. Maar in hoeverre kan je bijvoorbeeld aannemen dat iets op caniuse goed genoeg is.
 
 ## [Live demo](https://webdev-enquete.herokuapp.com/)
 
