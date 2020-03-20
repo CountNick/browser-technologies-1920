@@ -12,3 +12,19 @@ label{
     display: block;
     width: 100%;
 }
+
+fieldset
+{
+    border: .2rem solid seagreen;
+    -moz-border-radius:.2rem;
+    -webkit-border-radius:.2rem;	
+    border-radius:.5rem;	
+    padding:1rem;	
+}
+
+.saveLink{
+    background: seagreen;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius:.5rem;
+}

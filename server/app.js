@@ -26,47 +26,30 @@ H.registerHelpers(hbs)
 // save button mogelijk
 function homeRoute(req, res) {
 
-    // fs.readFile(__dirname  + '/static/dist/tilegridJsonDataFinal_0.json', "utf8", (err, data) => {
-    //     if(err) throw err;
-    
-    //     const resultArray = JSON.parse(data)
-    
-    //     res.render('home.hbs', {
-    //         data: resultArray
-    //     })
-
-    // });
-
+    const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+    let urlSave
     const data = req.query
 
-    res.render('home.hbs', {
-        data: data
-    })
+    if(fullUrl.includes("?")){
+        urlSave = fullUrl
+    }
 
+    res.render('home.hbs', {
+        data: data,
+        url: urlSave,
+        pageTitle: 'Enquete'
+    })
 }
+
+
 
 function thanksRoute(req, res){
     const data = req.query
-    // writeData(data)
 
     res.render('overview.hbs', {
-        data: data
+        data: data,
+        pageTitle: 'Check'
     })
-}
-
-function writeData(data, fileIndex = 0) {
-    fs.writeFile(path.join(__dirname  + '/static/dist/tilegridJsonDataFinal' +"_"+ fileIndex +".json"),
-        JSON.stringify(data,null,4),
-        { encoding: 'utf8', flag: 'wx'},
-        function(err) {
-            if (err && err.code == "EEXIST") {
-                writeData(data, ++fileIndex)
-            } else if (err) {
-                return console.log(err)
-            } else {
-                console.log("The file was saved!")
-            }
-        })
 }
 
 app.listen(port, () => {
