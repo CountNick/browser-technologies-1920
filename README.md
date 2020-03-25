@@ -4,7 +4,7 @@
 
 * Op dit moment heb ik doormiddel van een save knop de data in de url opgeslagen. Het formulier kan later verder worden ingevuld door de gekregen link later te bezoeken. Is dit goed genoeg als 'data tijdelijk opslaan' functie
 
-* Moet ik de core functionaliteiten en progressive enhancements verder toelichten? Ik weet niet zo goed wanneer het genoeg is.[hier](https://github.com/CountNick/browser-technologies-1920#anonieme-enquete-over-de-minor-webdev), en [hier](https://github.com/CountNick/browser-technologies-1920#notes-over-features-en-pe) te vinden
+* Moet ik de core functionaliteiten en progressive enhancements verder toelichten? Ik weet niet zo goed wanneer het genoeg is.[hier](https://github.com/CountNick/browser-technologies-1920#anonieme-enquete-over-de-minor-webdev), en [hier](https://github.com/CountNick/browser-technologies-1920#notes-over-features-en-pe) te vinden.
 
 * Ik weet niet zo goed hoe ik moet beginnen met het onderzoeken naar features. Ik snap dat je dingen kan testen met bijvoorbeeld @support, en natuurlijk testen in verschillende browsers opzich. Maar in hoeverre kan je bijvoorbeeld aannemen dat iets op caniuse goed genoeg is.
 
