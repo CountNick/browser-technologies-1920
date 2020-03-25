@@ -1,16 +1,50 @@
-/* *{
+*{
     padding: 0;
     margin: 0;
-} */
+}
+
+header{
+    /* display: flex; */
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 0 0 10px black;
+}
+
+header > section:first-of-type{
+    display: flex;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+
+  .progress-bar {
+    height: 8px;
+    background: seagreen;
+    width: 0%;
+  }
+  
+
+h1{
+    margin: auto 0;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 2.5rem;
+}
 
 img{
-    background-color: seagreen;
     display: inline-block;
 }
 
 label{
     display: block;
     width: 100%;
+}
+
+fieldset:first-of-type{
+    margin-top: 20rem;
 }
 
 fieldset
@@ -21,6 +55,14 @@ fieldset
     border-radius:.5rem;	
     padding:1rem;	
     transition: 1s;
+    margin-bottom: 2rem;
+}
+
+legend{
+    padding: 1rem;
+    background: white;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 fieldset:focus-within{
@@ -36,4 +78,13 @@ fieldset:focus-within{
 
 .filledIn{
     background-color: green;
+}
+
+
+/* Supports */
+@supports(display: flex){
+    form{
+        display: flex;
+        flex-direction: column;
+    }
 }

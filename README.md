@@ -76,6 +76,12 @@ Hier een eerste schets van de tweede versie van de vragenlijst:
 ![Wireflow v2](https://user-images.githubusercontent.com/47485018/76967495-d667f680-6927-11ea-987b-da67a346fc69.jpeg)
 
 
+### Onderzoek 
+
+* Rem niet ondersteunde ie 9-10 
+* Scrollto/scroll into view vervangen door bijvoorbeeld relatieve link?
+
+
 ### Vragen 
 
 Hoofdvraag:

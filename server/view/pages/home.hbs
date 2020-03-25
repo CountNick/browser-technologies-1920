@@ -15,6 +15,28 @@
                 {{!-- <input type="search" id="search" name="searchValue" placeholder="Search for a character" data-search-input="input"/> --}}
                 {{log 'ls' localStorage}}
                 <fieldset>
+                    <legend><b>Wat is je geslacht?</b></legend>
+
+                    <label for="man">
+                        <input type="radio" id="man" name="geslacht" value="man" required
+                            {{#if (eqw data.geslacht "man")}} checked {{/if}}>
+
+                        Man</label>
+                    <label for="vrouw">
+                        <input type="radio" id="vrouw" name="geslacht" value="vrouw" required
+                            {{#if (eqw data.geslacht "vrouw")}} checked {{/if}}>
+
+                        Vrouw
+                    </label>
+                    <label for="anders">
+                        <input type="radio" id="anders" name="geslacht" value="anders" required
+                            {{#if (eqw data.geslacht "anders")}} checked {{/if}}>
+
+                        Anders
+                    </label>
+                </fieldset>
+
+                <fieldset>
                     <legend><b>Ben je CMD student?</b></legend>
 
                     <label for="ja">
@@ -124,6 +146,7 @@
 
     {{> footer}}
     <script src="/js/save-input.js"></script>
+    <script src="/js/scroll-bar.js"></script>
 </body>
 
 </html>
