@@ -20,6 +20,11 @@ fieldset
     -webkit-border-radius:.2rem;	
     border-radius:.5rem;	
     padding:1rem;	
+    transition: 1s;
+}
+
+fieldset:focus-within{
+    background: rgba(122, 190, 150, .5);
 }
 
 .saveLink{
@@ -27,4 +32,8 @@ fieldset
     color: #ffffff;
     padding: 1rem;
     border-radius:.5rem;
+}
+
+.filledIn{
+    background: green;
 }
