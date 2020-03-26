@@ -28,8 +28,8 @@
                             <span class="checkmark"></span>
                         Vrouw
                     </label>
-                    <label for="anders">
-                        <input type="radio" id="anders" name="geslacht" value="anders" required
+                    <label for="anders-geslacht">
+                        <input type="radio" id="anders-geslacht" name="geslacht" value="anders" required
                             {{#if (eqw data.geslacht "anders")}} checked {{/if}}>
                             <span class="checkmark"></span>
                         Anders
@@ -133,10 +133,7 @@
                 
                 {{#if (not (eq url ''))}}
                 
-                <section class="saveLink">
-                <p>Sla deze url op door hem te kopieren om later verder te gaan: </p>
-                <b><i>{{url}}</i></b>
-                </section>
+                    {{> save}}
                 
                 {{/if}}
 

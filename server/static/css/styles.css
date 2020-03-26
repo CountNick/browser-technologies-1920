@@ -51,6 +51,10 @@ label{
     cursor: pointer;
 }
 
+label.white{
+    color: white;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -58,8 +62,8 @@ form{
     margin: 0 auto;
 }
 
-fieldset:first-of-type{
-    margin-top: 20rem;
+article{
+    padding-top: 20rem;
 }
 
 fieldset
@@ -97,6 +101,15 @@ fieldset:focus-within{
     background-color: green;
 }
 
+input[type='text']{
+    width: 80%;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: #eee;
+    border: transparent;
+    resize: both;
+}
+
 input[type='submit']{
     border-style: solid;
     border-color: #03fc03;
@@ -117,35 +130,6 @@ input[type='submit']:hover{
     border-color: #03fc03;
     border-style: solid;
 }
-
-/* input[type='radio']:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #d1d3d1;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-    transition: .3s;
-}
-
-input[type='radio']:checked:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #ffa500;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-} */
 
 input[type='radio'],input[type='checkbox'] {
     position: absolute;
