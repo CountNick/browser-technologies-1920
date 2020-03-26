@@ -1,3 +1,10 @@
+
+const saveButton = document.querySelector('.saveButton')
+const saveLink = document.querySelector('.saveLink')
+
+saveButton.remove()
+saveLink.remove()
+
 // select the form
 const form = document.querySelector('form')
 //select input fields
@@ -90,7 +97,7 @@ if(localStorage.voorkennis){
 }
 
 required.forEach(element => {
-    if(!element.checked) filledInWrongly(element.parentElement.parentElement)
+    // if(!element.checked) filledInWrongly(element.parentElement.parentElement)
 });
 
 console.log('parentnodereq: ', required.parentElement)

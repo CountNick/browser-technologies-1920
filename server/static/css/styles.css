@@ -5,6 +5,7 @@
 
 header{
     /* display: flex; */
+    z-index: 1;
     position: fixed;
     background-color: #ffffff;
     width: 100%;
@@ -39,8 +40,22 @@ img{
 }
 
 label{
+    z-index: 0;
     display: block;
     width: 100%;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
 }
 
 fieldset:first-of-type{
@@ -56,9 +71,11 @@ fieldset
     padding:1rem;	
     transition: 1s;
     margin-bottom: 2rem;
+    
 }
 
 legend{
+    border: solid;
     padding: 1rem;
     background: white;
     font-size: 1.1rem;
@@ -80,11 +97,140 @@ fieldset:focus-within{
     background-color: green;
 }
 
-
-/* Supports */
-@supports(display: flex){
-    form{
-        display: flex;
-        flex-direction: column;
-    }
+input[type='submit']{
+    border-style: solid;
+    border-color: #03fc03;
+    width: 25%;
+    border-style: none;
+    padding: 1rem;
+    background: #03fc03;
+    font-size: 1rem;
+    color: white;
+    font-family: "Arial Black", Gadget, sans-serif;
+    border-radius: .5rem;
+    transition: .3s;
 }
+
+input[type='submit']:hover{
+    background: #ffffff;
+    color: #03fc03;
+    border-color: #03fc03;
+    border-style: solid;
+}
+
+/* input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+    transition: .3s;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+} */
+
+input[type='radio'],input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+input[type='checkbox']{
+    height: 0;
+    width: 0;
+}
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  .checkmark-checkbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+
+  }
+
+  label:hover > input[type='radio'] ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  label:hover > input[type='checkbox'] ~ .checkmark-checkbox {
+    background-color: #ccc;
+  }
+
+  label input[type='radio']:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+  label input[type='checkbox']:checked ~ .checkmark-checkbox {
+    background-color: #2196F3;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .checkmark-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  label input[type='radio']:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  label input[type='checkbox']:checked ~ .checkmark-checkbox:after {
+    display: block;
+  }
+  
+  label .checkmark-checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  label .checkmark:after {
+    top: 9px;
+   left: 9px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: white;
+}
+  

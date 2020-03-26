@@ -15,89 +15,89 @@
                 {{!-- <input type="search" id="search" name="searchValue" placeholder="Search for a character" data-search-input="input"/> --}}
                 {{log 'ls' localStorage}}
                 <fieldset>
-                    <legend><b>Wat is je geslacht?</b></legend>
+                    <legend><b>1 - Wat is je geslacht?</b></legend>
 
                     <label for="man">
                         <input type="radio" id="man" name="geslacht" value="man" required
                             {{#if (eqw data.geslacht "man")}} checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Man</label>
                     <label for="vrouw">
                         <input type="radio" id="vrouw" name="geslacht" value="vrouw" required
                             {{#if (eqw data.geslacht "vrouw")}} checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Vrouw
                     </label>
                     <label for="anders">
                         <input type="radio" id="anders" name="geslacht" value="anders" required
                             {{#if (eqw data.geslacht "anders")}} checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Anders
                     </label>
                 </fieldset>
 
                 <fieldset>
-                    <legend><b>Ben je CMD student?</b></legend>
+                    <legend><b>2 - Ben je CMD student?</b></legend>
 
                     <label for="ja">
                         <input type="radio" id="ja" name="studentAchtergrond" value="wel CMD"
                             {{#if (eqw data.studentAchtergrond "wel CMD")}} checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Ja</label>
                     <label for="nee">
                         <input type="radio" id="nee" name="studentAchtergrond" value="geen CMD"
                             {{#if (eqw data.studentAchtergrond "geen CMD")}} checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Nee
                     </label>
                 </fieldset>
 
                 <fieldset>
-                    <legend><b>Hoe bevalt de minor je tot nu toe?</b></legend>
+                    <legend><b>3 - Hoe bevalt de minor je tot nu toe?</b></legend>
 
                     <label for="goed">
                         <input type="radio" id="goed" name="bevalt" value="goed te doen"
                             {{#if (eqw data.bevalt "goed te doen")}} checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Goed te doen</label>
                     <label for="zwaar">
                         <input type="radio" id="zwaar" name="bevalt" value="zwaar" {{#if (eqw data.bevalt "zwaar")}}
                             checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Zwaar, maar managable</label>
                     <label for="niet">
                         <input type="radio" id="niet" name="bevalt" value="niet te doen"
                             {{#if (eqw data.bevalt "niet te doen")}} checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Niet te doen
                     </label>
                 </fieldset>
 
                 <fieldset>
-                    <legend><b>Had je al voorkennis over HTML, CSS en Javascript?</b></legend>
+                    <legend><b>4 - Had je al voorkennis over HTML, CSS en Javascript?</b></legend>
 
                     <label for="VKja">
                         <input type="radio" id="VKja" name="voorkennis" value="wel voorkennis"
                             {{#if (eqw data.voorkennis "wel voorkennis")}} checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Ja</label>
 
                     <label for="VKnee">
                         <input type="radio" id="VKnee" name="voorkennis" value="geen voorkennis"
                             {{#if (eqw data.voorkennis "geen voorkennis")}} checked {{/if}}>
-
+                            <span class="checkmark"></span>
                         Nee
                     </label>
                 </fieldset>
 
                 <fieldset>
-                    <legend><b>Waar heb je deze voorkennis opgedaan?</b></legend>
+                    <legend><b>5 - Waar heb je deze voorkennis opgedaan?</b></legend>
                     
                     <label for="geen">
                     
                         <input type="checkbox" id="geen" name="geen" value="Geen"
                             {{#if (eqw data.geen "Geen")}} checked {{/if}}>
-
+                            <span class="checkmark-checkbox"></span>
                         Ik had geen voorkennis
                     </label>
 
@@ -105,21 +105,21 @@
                     
                         <input type="checkbox" id="zelf" name="zelfSchool" value="Zelfscholing"
                             {{#if (eqw data.zelfSchool "Zelfscholing")}} checked {{/if}}>
-
+                            <span class="checkmark-checkbox"></span>
                         Zelfscholing
                     </label>
                     <label for="school">
                     
                         <input type="checkbox" id="school" name="school" value="School"
                             {{#if (eqw data.school "School")}} checked {{/if}}>
-
+                            <span class="checkmark-checkbox"></span>
                         School
                     </label>
                     <label for="anders">
                     
                         <input type="checkbox" id="anders" name="anders" value="Anders"
                             {{#if (eqw data.anders "Anders")}} checked {{/if}}>
-
+                            <span class="checkmark-checkbox"></span>
                         Anders, namelijk: 
 
                         <input type="text" name="anders" id="andersOpen" placeholder="vul iets in">
@@ -128,14 +128,16 @@
                 </fieldset>
 
 
-                <input type="submit" value="opslaan">
+                <input type="submit" value="opslaan" class="saveButton">
                 <input type="submit" formaction="/thanks" value="verstuur">
                 
                 {{#if (not (eq url ''))}}
                 
+                <section class="saveLink">
                 <p>Sla deze url op door hem te kopieren om later verder te gaan: </p>
-                <b class="saveLink"><i>{{url}}</i></b>
-
+                <b><i>{{url}}</i></b>
+                </section>
+                
                 {{/if}}
 
             </form>
