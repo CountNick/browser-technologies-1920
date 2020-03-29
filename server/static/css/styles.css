@@ -16,18 +16,27 @@ header > section:first-of-type{
     display: flex;
 }
 
-.progress-container {
-    width: 100%;
-    height: 8px;
-    background: #ccc;
-  }
+progress {
+ 
+  width: 100%;
+  border: 0; /* for IE */
+  height: 1rem;
+  background-color: white;
+  border: 1px solid seagreen;
+  overflow: hidden;
+}
 
-  .progress-bar {
-    height: 8px;
-    background: seagreen;
-    width: 0%;
-  }
-  
+/* necessary to style the progress bar background */
+::-webkit-progress-bar {
+  background-color: white; 
+}
+
+
+.animated::-webkit-progress-value {
+  transition: width 1s;
+  background-color: seagreen;
+}
+
 
 h1{
     margin: auto 0;
@@ -46,9 +55,10 @@ label{
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    padding-left: 35px;
+    padding-left: 40px;
     margin-bottom: 12px;
     cursor: pointer;
+    padding-top: .3rem;
 }
 
 label.white{
@@ -97,8 +107,12 @@ fieldset:focus-within{
     border-radius:.5rem;
 }
 
-.filledIn{
-    background-color: green;
+.saveButton{
+    background-color: rgba(3, 252, 3, .5);
+}
+
+.active{
+    /* background-color: seagreen; */
 }
 
 input[type='text']{
@@ -111,8 +125,9 @@ input[type='text']{
 }
 
 input[type='submit']{
+    margin: 5px;
     border-style: solid;
-    border-color: #03fc03;
+    border-color: #ffffff;
     width: 25%;
     border-style: none;
     padding: 1rem;
@@ -129,6 +144,7 @@ input[type='submit']:hover{
     color: #03fc03;
     border-color: #03fc03;
     border-style: solid;
+    cursor: pointer;
 }
 
 input[type='radio'],input[type='checkbox'] {
@@ -143,6 +159,7 @@ input[type='checkbox']{
 }
 
   .checkmark {
+    border: solid #ffffff;
     position: absolute;
     top: 0;
     left: 0;
@@ -153,6 +170,7 @@ input[type='checkbox']{
   }
 
   .checkmark-checkbox{
+    border: solid #ffffff;
     position: absolute;
     top: 0;
     left: 0;
@@ -218,3 +236,12 @@ input[type='checkbox']{
    background: white;
 }
   
+.formBtns{
+    justify-content: flex-end;
+    display: flex;
+    padding: 5px;
+}
+
+.active{
+    background-color: red;
+}

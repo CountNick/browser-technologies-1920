@@ -127,10 +127,10 @@
 
                 </fieldset>
 
-
+                <section class="formBtns">
                 <input type="submit" value="opslaan" class="saveButton">
-                <input type="submit" formaction="/thanks" value="verstuur">
-                
+                <input type="submit" formaction="/thanks" value="verstuur" class="sendButton">
+                </section>
                 {{#if (not (eq url ''))}}
                 
                     {{> save}}
@@ -145,7 +145,7 @@
 
     {{> footer}}
     <script src="/js/save-input.js"></script>
-    <script src="/js/scroll-bar.js"></script>
+    {{!-- <script src="/js/scroll-bar.js"></script> --}}
 </body>
 
 </html>
