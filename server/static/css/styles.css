@@ -13,13 +13,15 @@ header{
 }
 
 header > section:first-of-type{
-    display: flex;
+    /* display: flex; */
+    display: table;
 }
 
 progress {
  
   width: 100%;
   border: 0; /* for IE */
+  height: 16px;
   height: 1rem;
   background-color: white;
   border: 1px solid seagreen;
@@ -31,6 +33,22 @@ progress {
   background-color: white; 
 }
 
+::-moz-progress-bar {
+  transition: padding-bottom 1s;
+  padding-bottom: var(--value);
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateX(-15px);
+  padding-left: 15px;
+  background-color: seagreen;
+}
+
+progress {
+  overflow: hidden;
+}
+
+::-moz-progress-bar {
+  height: 0;
+}
 
 .animated::-webkit-progress-value {
   transition: width 1s;
@@ -41,6 +59,7 @@ progress {
 h1{
     margin: auto 0;
     font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 40px;
     font-size: 2.5rem;
 }
 
@@ -52,12 +71,15 @@ label{
     z-index: 0;
     display: block;
     width: 100%;
+    font-size: 20px;
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
     padding-left: 40px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
     cursor: pointer;
+    padding-top: 5px;
     padding-top: .3rem;
 }
 
@@ -66,32 +88,38 @@ label.white{
 }
 
 form{
-    display: flex;
-    flex-direction: column;
+    display: table;
     width: 70%;
     margin: 0 auto;
 }
 
 article{
+    padding-top: 320px;
     padding-top: 20rem;
 }
 
 fieldset
-{
+{   border: 3px solid seagreen;
     border: .2rem solid seagreen;
     -moz-border-radius:.2rem;
     -webkit-border-radius:.2rem;	
+    
+    border-radius: 8px;	
     border-radius:.5rem;	
+    padding: 16px;
     padding:1rem;	
     transition: 1s;
+    margin-bottom: 32px;
     margin-bottom: 2rem;
     
 }
 
 legend{
     border: solid;
+    padding: 16px;
     padding: 1rem;
     background: white;
+    font-size: 18px;
     font-size: 1.1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -103,7 +131,9 @@ fieldset:focus-within{
 .saveLink{
     background: seagreen;
     color: #ffffff;
+    padding: 16px;
     padding: 1rem;
+    border-radius:8px;
     border-radius:.5rem;
 }
 
@@ -111,13 +141,13 @@ fieldset:focus-within{
     background-color: rgba(3, 252, 3, .5);
 }
 
-.active{
-    /* background-color: seagreen; */
-}
+
 
 input[type='text']{
     width: 80%;
+    font-size: 16px;
     font-size: 1rem;
+    padding: 16px;
     padding: 1rem;
     background-color: #eee;
     border: transparent;
@@ -130,11 +160,14 @@ input[type='submit']{
     border-color: #ffffff;
     width: 25%;
     border-style: none;
+    padding: 16px;
     padding: 1rem;
     background: #03fc03;
+    font-size: 16px;
     font-size: 1rem;
     color: white;
     font-family: "Arial Black", Gadget, sans-serif;
+    border-radius: 8px;
     border-radius: .5rem;
     transition: .3s;
 }
@@ -229,19 +262,34 @@ input[type='checkbox']{
 
   label .checkmark:after {
     top: 9px;
-   left: 9px;
-   width: 8px;
-   height: 8px;
-   border-radius: 50%;
-   background: white;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
 }
   
 .formBtns{
-    justify-content: flex-end;
-    display: flex;
     padding: 5px;
 }
 
 .active{
     background-color: red;
+}
+
+@supports(display: flex){
+  .formBtns{
+    justify-content: flex-end;
+    display: flex;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  header > section:first-of-type{
+    display: flex;
+  }
+
 }

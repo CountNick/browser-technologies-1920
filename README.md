@@ -1,25 +1,11 @@
 # Browser technologies
 
-# Waar ik graag feedback op zou krijgen:
-
-* Op dit moment heb ik doormiddel van een save knop de data in de url opgeslagen. Het formulier kan later verder worden ingevuld door de gekregen link later te bezoeken. Is dit goed genoeg als 'data tijdelijk opslaan' functie
-
-* Moet ik de core functionaliteiten en progressive enhancements verder toelichten? Ik weet niet zo goed wanneer het genoeg is.[hier](https://github.com/CountNick/browser-technologies-1920#anonieme-enquete-over-de-minor-webdev), en [hier](https://github.com/CountNick/browser-technologies-1920#notes-over-features-en-pe) te vinden.
-
-* Ik weet niet zo goed hoe ik moet beginnen met het onderzoeken naar features. Ik snap dat je dingen kan testen met bijvoorbeeld @support, en natuurlijk testen in verschillende browsers opzich. Maar in hoeverre kan je bijvoorbeeld aannemen dat iets op caniuse goed genoeg is.
-
 ## [Live demo](https://webdev-enquete.herokuapp.com/)
 
 ![Schermafbeelding 2020-03-20 om 13 04 23](https://user-images.githubusercontent.com/47485018/77162064-684c3c80-6aab-11ea-9784-2d98f6666524.png)
 
 
-## Opdracht 1.2:
-
-* ### [Device lab](https://github.com/CountNick/browser-technologies-1920#device-lab-1)
-* ### [Screenreader](https://github.com/CountNick/browser-technologies-1920#screenreader-1)
-* ### [8 feature test](https://github.com/CountNick/browser-technologies-1920#8-feature-test-1)
-* ### [Browser test](https://github.com/CountNick/browser-technologies-1920#browser-test-1)
-* ### [To do list](https://github.com/CountNick/browser-technologies-1920#to-do-list-1)
+## [Opdracht 1.2]()
 
 ## Opdracht 2 
 
@@ -66,7 +52,7 @@ __Progressive enhancements:__
     * Geberuikers kunnen zien hoever ze met het formulier zijn
 * Data automatisch opslaan met Local Storage inplaats van saveknop voor mensen met JS/localstorage
 
-* Fieldset feedback geven op het moment dat de gebruiker een vraag heeft ingevuld/
+* Fieldsets geven feedback op het moment dat de gebruiker een vraag heeft ingevuld/
     * Als de gebruiker een vraag heeft ingevuld word de fieldset groen, en bij een vergeten vraag oranje of rood.
 
 Hier een eerste schets van de tweede versie van de vragenlijst: 
@@ -82,39 +68,90 @@ Hier een eerste schets van de tweede versie van de vragenlijst:
 * Scrollto/scroll into view vervangen door bijvoorbeeld relatieve link?
 
 
-### Vragen 
 
-Hoofdvraag:
+#### Progress
 
-* Ben je een CMD student?
+I kwam erachter dat er een HTML element bestaat dat gemaakt is om progressie te tonen:
 
+```html
+<progress class="animated" max="100" value="0" id="progress"></progress>
+```
+Dit element word door bijna elke major browser ondersteund behalve door iOS Safari. Ook is de waarde die in dit element zit te animeren. Voor Chrome en Safari is dit vrij simpel je heoft hiervoor alleen een transition op de width van het value element te zetten. Dit bleek voor Firefox niet ven makkelijk te zijn, maar helaas kan je geen transition op de width zetten in Firefox. Om hetzelfde effect te bereiken heb ik naar instructie van [Jonathan Snook](https://snook.ca/archives/html_and_css/animating-progress) de padding-bottm geanimeerd dmv een custom propertie die in javascript gebonden is aan de value van het progress element:
 
-ja:
+css:
+```css
+::-moz-progress-bar {
+  transition: padding-bottom 1s;
+  padding-bottom: var(--value);
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateX(-15px);
+  padding-left: 15px;
+}
 
-    * Hoe bevalt de minor je tot nu toe?
+progress {
+  overflow: hidden;
+}
 
-        * Zwaar
-        * Goed te doen
-        * Zwaar, maar ik manage het goed
+::-moz-progress-bar {
+  height: 0;
+}
+
+```
+js:
+```js
+progressBar.style.setProperty('--value', progressBar.value + '%');
+```
+
+bron: [Animating Progress - Jonathan Snook](https://snook.ca/archives/html_and_css/animating-progress)
+
+# CSS
+
+#### Flexbox
+
+Schrijf hier iets over flexbox fallback
+
+#### REM 
+
+Rem word nog niet door elke browser ondersteund [dit artikel](https://stackoverflow.com/questions/21854416/using-rems-with-a-pixel-fallback) bood hiervoor een oplossing: Als je eerste de waarde in pixels defineert en daar onder in rem, pakt de browser als rem bekent is rem en anders blijf het px : 
+
+```css
+label{
+
+    font-size: 20px;
+    font-size: 1.2rem;
     
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
 
-    * Heb je blok tech gedaan?
-    * Heb je de tech track gedaan?
-        
-        * Ja
-            * Denk je dat je het zonder het volgen van deze vakken ook had kunnen doen?
+    padding-top: 5px;
+    padding-top: .3rem;
+}
+```
 
+#### Remove
 
+Remove() is not supported [by older browsers](https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove).
+There is a older way of using remove: 
 
+```js
+saveButton.remove()
+saveLink.remove()
+//became:
+saveButton.parentNode.removeChild(saveButton)
+saveLink.parentNode.removeChild(saveLink)
+```
 
+#### forEach
 
-nee: 
+Blijkbaar ondersteund [internet explorer forEach niet](https://developer.mozilla.org/nl/docs/Web/API/NodeList/forEach).[Uitleg](https://stackoverflow.com/questions/16053357/what-does-foreach-call-do-in-javascript) Dit was de oplossing hiervoor: 
 
-    * Valt de minor je zwaar? 
+```js
+geslacht.forEach(function(item){
+    if(item.checked == true) numValid++
+})
+//became:
+Array.prototype.forEach.call(geslacht, function(node){
+    if(node.checked == true) numValid++
+})
 
-        * ja
-
-        * nee
-
-            * Had je al voorkennis over HTML, CSS en javascript zo ja open antwoord
-
+```
