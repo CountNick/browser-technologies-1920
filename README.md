@@ -5,8 +5,6 @@
 ![Schermafbeelding 2020-03-20 om 13 04 23](https://user-images.githubusercontent.com/47485018/77162064-684c3c80-6aab-11ea-9784-2d98f6666524.png)
 
 
-## [Opdracht 1.2]()
-
 ## Opdracht 2 
 
 Gekozen case: Ik wil een enquete kunnen invullen over de minor Web Development, met verschillende antwoord mogelijkheden. Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
@@ -25,7 +23,7 @@ Feature 2 - Als ik de enquete niet afkrijg, wil ik later weer verder gaan met wa
 
 * Ingevulde input waardes opslaan in de url van de gebruiker, en deze url aan de gerbuiker tonen zodat deze later verder ingevuld kan worden.
 
-### Wireflows
+### Wireflow
 
 #### V1
 ![Wireflow v1](https://user-images.githubusercontent.com/47485018/76967426-b89a9180-6927-11ea-84a6-bdb6c1c0bb4b.jpeg)
@@ -62,10 +60,35 @@ Hier een eerste schets van de tweede versie van de vragenlijst:
 ![Wireflow v2](https://user-images.githubusercontent.com/47485018/76967495-d667f680-6927-11ea-987b-da67a346fc69.jpeg)
 
 
+### Progressive enhancement
+
+**Functional layer**
+
+![functional](https://user-images.githubusercontent.com/47485018/77910796-056b5a00-7290-11ea-8bb7-f0c6cbe091e6.gif)
+
+De basislaag werkt nu zonder javascript en css. Gebruikers kunnen het formulier invullen en op de opslaan knop drukken, de link die gekopieeerd moet worden worde dan getoond. Ook kan de gebruiker het formulier verzenden.
+
+**Usable layer**
+
+![Usable](https://user-images.githubusercontent.com/47485018/77913265-3ea5c900-7294-11ea-8d8d-a0a22e354e39.gif)
+
+
+**Pleasurable**
+
+The pleasurable version shows the user what his or her progression is in the form through the progress element. The save option doesn't have to be clicked anymore in order to save the state of the form. This is now autmatically being taken care of through local storage: 
+
+![filled in and progress](https://user-images.githubusercontent.com/47485018/77913807-37cb8600-7295-11ea-916d-8ed41e300d2e.gif)
+
+The user also gets feedback when a question gets filled in correctly or when a required field was not filled in:
+![forgot to fill in: ](https://user-images.githubusercontent.com/47485018/77916029-bd046a00-7298-11ea-9051-8ee926152f1b.gif)
+
+
+
+
 ### Onderzoek 
 
 * Rem niet ondersteunde ie 9-10 
-* Scrollto/scroll into view vervangen door bijvoorbeeld relatieve link?
+* scrollIntoView smooth niet ondersteund ie en safari Ios
 
 
 
@@ -155,3 +178,5 @@ Array.prototype.forEach.call(geslacht, function(node){
 })
 
 ```
+
+#### Arrow functions

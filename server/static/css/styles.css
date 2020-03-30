@@ -1,24 +1,23 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-header{
-    /* display: flex; */
-    z-index: 1;
-    position: fixed;
-    background-color: #ffffff;
-    width: 100%;
-    box-shadow: 0 0 10px black;
+header {
+  /* display: flex; */
+  z-index: 1;
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0 0 10px black;
 }
 
-header > section:first-of-type{
-    /* display: flex; */
-    display: table;
+header > section:first-of-type {
+  /* display: flex; */
+  display: table;
 }
 
 progress {
- 
   width: 100%;
   border: 0; /* for IE */
   height: 16px;
@@ -30,7 +29,7 @@ progress {
 
 /* necessary to style the progress bar background */
 ::-webkit-progress-bar {
-  background-color: white; 
+  background-color: white;
 }
 
 ::-moz-progress-bar {
@@ -55,241 +54,243 @@ progress {
   background-color: seagreen;
 }
 
-
-h1{
-    margin: auto 0;
-    font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 40px;
-    font-size: 2.5rem;
+h1 {
+  margin: auto 0;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 40px;
+  font-size: 2.5rem;
 }
 
-img{
-    display: inline-block;
+img {
+  display: inline-block;
 }
 
-label{
-    z-index: 0;
-    display: block;
-    width: 100%;
-    font-size: 20px;
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 16px;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    padding-top: 5px;
-    padding-top: .3rem;
+label {
+  z-index: 0;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-top: 0.3rem;
 }
 
-label.white{
-    color: white;
+label.white {
+  color: white;
 }
 
-form{
-    display: table;
-    width: 70%;
-    margin: 0 auto;
+form {
+  display: table;
+  width: 70%;
+  margin: 0 auto;
 }
 
-article{
-    padding-top: 320px;
-    padding-top: 20rem;
+article {
+  padding-top: 320px;
+  padding-top: 20rem;
 }
 
-fieldset
-{   border: 3px solid seagreen;
-    border: .2rem solid seagreen;
-    -moz-border-radius:.2rem;
-    -webkit-border-radius:.2rem;	
-    
-    border-radius: 8px;	
-    border-radius:.5rem;	
-    padding: 16px;
-    padding:1rem;	
-    transition: 1s;
-    margin-bottom: 32px;
-    margin-bottom: 2rem;
-    
+fieldset, .answerCheck {
+  border: 3px solid seagreen;
+  border: 0.2rem solid seagreen;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+
+  border-radius: 8px;
+  border-radius: 0.5rem;
+  padding: 16px;
+  padding: 1rem;
+  transition: 1s;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
-legend{
-    border: solid;
-    padding: 16px;
-    padding: 1rem;
-    background: white;
-    font-size: 18px;
-    font-size: 1.1rem;
-    font-family: Arial, Helvetica, sans-serif;
+legend {
+  border: solid;
+  padding: 16px;
+  padding: 1rem;
+  background: white;
+  font-size: 18px;
+  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-fieldset:focus-within{
-    background: rgba(122, 190, 150, .5);
+fieldset:focus-within {
+  background: rgba(122, 190, 150, 0.5);
 }
 
-.saveLink{
-    background: seagreen;
-    color: #ffffff;
-    padding: 16px;
-    padding: 1rem;
-    border-radius:8px;
-    border-radius:.5rem;
+.saveLink {
+  background: seagreen;
+  color: #ffffff;
+  padding: 16px;
+  padding: 1rem;
+  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
-.saveButton{
-    background-color: rgba(3, 252, 3, .5);
+.saveButton {
+  background-color: rgba(3, 252, 3, 0.5);
 }
 
-
-
-input[type='text']{
-    width: 80%;
-    font-size: 16px;
-    font-size: 1rem;
-    padding: 16px;
-    padding: 1rem;
-    background-color: #eee;
-    border: transparent;
-    resize: both;
+.answerCheck{
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
-input[type='submit']{
-    margin: 5px;
-    border-style: solid;
-    border-color: #ffffff;
-    width: 25%;
-    border-style: none;
-    padding: 16px;
-    padding: 1rem;
-    background: #03fc03;
-    font-size: 16px;
-    font-size: 1rem;
-    color: white;
-    font-family: "Arial Black", Gadget, sans-serif;
-    border-radius: 8px;
-    border-radius: .5rem;
-    transition: .3s;
+input[type="text"] {
+  width: 80%;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 16px;
+  padding: 1rem;
+  background-color: #eee;
+  border: transparent;
+  resize: both;
 }
 
-input[type='submit']:hover{
-    background: #ffffff;
-    color: #03fc03;
-    border-color: #03fc03;
-    border-style: solid;
-    cursor: pointer;
+input[type="submit"] {
+  margin: 5px;
+  border-style: solid;
+  border-color: #ffffff;
+  width: 25%;
+  border-style: none;
+  padding: 16px;
+  padding: 1rem;
+  background: #03fc03;
+  font-size: 16px;
+  font-size: 1rem;
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+  border-radius: 8px;
+  border-radius: 0.5rem;
+  transition: 0.3s;
 }
 
-input[type='radio'],input[type='checkbox'] {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-
-input[type='checkbox']{
-    height: 0;
-    width: 0;
+input[type="submit"]:hover {
+  background: #ffffff;
+  color: #03fc03;
+  border-color: #03fc03;
+  border-style: solid;
+  cursor: pointer;
 }
 
-  .checkmark {
-    border: solid #ffffff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-  }
-
-  .checkmark-checkbox{
-    border: solid #ffffff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-
-  }
-
-  label:hover > input[type='radio'] ~ .checkmark {
-    background-color: #ccc;
-  }
-
-  label:hover > input[type='checkbox'] ~ .checkmark-checkbox {
-    background-color: #ccc;
-  }
-
-  label input[type='radio']:checked ~ .checkmark {
-    background-color: #2196F3;
-  }
-
-  label input[type='checkbox']:checked ~ .checkmark-checkbox {
-    background-color: #2196F3;
-  }
-
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  .checkmark-checkbox:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-  label input[type='radio']:checked ~ .checkmark:after {
-    display: block;
-  }
-
-  label input[type='checkbox']:checked ~ .checkmark-checkbox:after {
-    display: block;
-  }
-  
-  label .checkmark-checkbox:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  label .checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
-}
-  
-.formBtns{
-    padding: 5px;
+input[type="radio"],
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.active{
-    background-color: red;
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
 }
 
-@supports(display: flex){
-  .formBtns{
+.checkmark {
+  border: solid #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.checkmark-checkbox {
+  border: solid #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+label:hover > input[type="radio"] ~ .checkmark {
+  background-color: #ccc;
+}
+
+label:hover > input[type="checkbox"] ~ .checkmark-checkbox {
+  background-color: #ccc;
+}
+
+label input[type="radio"]:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+label input[type="checkbox"]:checked ~ .checkmark-checkbox {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkmark-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+label input[type="radio"]:checked ~ .checkmark:after {
+  display: block;
+}
+
+label input[type="checkbox"]:checked ~ .checkmark-checkbox:after {
+  display: block;
+}
+
+label .checkmark-checkbox:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+label .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.formBtns {
+  padding: 5px;
+}
+
+.active {
+  background-color: red;
+}
+
+@supports (display: flex) {
+  .formBtns {
     justify-content: flex-end;
     display: flex;
   }
 
-  form{
+  form {
     display: flex;
     flex-direction: column;
   }
 
-  header > section:first-of-type{
+  header > section:first-of-type {
     display: flex;
   }
-
 }
