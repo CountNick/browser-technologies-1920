@@ -1,13 +1,22 @@
-# Browser technologies
+# __Anonieme enquete over de minor webdev__
 
 ## [Live demo](https://webdev-enquete.herokuapp.com/)
 
 ![headerimg](https://user-images.githubusercontent.com/47485018/78030734-d96cd900-7362-11ea-8f9a-4b930cbead35.png)
 
+## Inhoudsopgave
+
+* ### [Inleiding]()
+* ### [Core functionaliteiten]()
+* ### [Wireflow]()
+* ### [Progressive enhancement]()
+* ### [Onderzoek]()
+* ### [Feature test]()
+* ### [Conclusie]()
+
+## Inleiding
 
 Gekozen case: Ik wil een enquete kunnen invullen over de minor Web Development, met verschillende antwoord mogelijkheden. Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
-
-## __Anonieme enquete over de minor webdev__
 
 ## Core functionaliteiten: 
 
@@ -280,7 +289,7 @@ __8. Local Storage__
 
     - Ook zonder Local Storage werkt de automatische opslag functie dus niet. Dus in dit geval is ook hier de fallback hetzelfde als in stap 7 en 8.
 
-### Conclusie
+## Conclusie
 
 * **Student kan de core functionaliteit van een use case doorgronden**
 
@@ -292,7 +301,13 @@ Er worden verschillende vormen van feedback door het formulier heengegeven. Als 
 
 * **Readme: In de beschrijving van het project staat een probleemdefinitie, hoe het probleem is opgelost en een uitleg van de code.**
 
-hier uitleg
+**Probleemdefinitie**
+
+Er word aan studenten gevraagd of zij een enquete willen invullen. De enquete is alleen best lang dus niet iedereen heeft tijd deze in 1 keer in e vullen. De studenten moeten de enquete dus af kunnen sluiten en later weer verdder kunnen gaan. Ook moet het formulier verstuurd kunnen worden.
+
+**Hoe is dit opgelost?**
+
+Het probleem is opgelost door de input op te slaan in localStorage en deze input in te vullen als dit in localStorage staat. Als dit niet zo is of als er geen local storage beschikbaar is in de browser kunnen studenten op de opslaan knop drukken. Zij krijgen dan een link te zien die zij zelf ergens moeten bewaren om later verder te kunnen gaan met de enquete.
 
 * **Student kan uitleggen wat Progressive enhancement is.**
 * **Student laat zien hoe Progressive Enhancement toe te passen in Web Development**
@@ -302,4 +317,6 @@ hier uitleg
 * **Student kan uitleggen wat Feature detection is.**
 * **Student laat zien hoe Feature Detection kan worden toegepast in Web Development**
 
-[Hier pas ik feature detection toe]()
+
+Feature detection is het detecteren of een bepaalde feature word ondersteund door een browser. Als de feature word onderstuend kan je die gebruiken en anders kan je hier een fallback voor maken.
+[Hier pas ik feature detection toe](https://github.com/CountNick/browser-technologies-1920#feature-detection), als er localstorage is worden de inputs sutomatisch opgeslagen en hoeft de saveknop en link dus ook niet getoond te worden. Als er wel local storage is zijn deze echter niet nodig en hoeven deze dus ook niet getoond te worden. Je kna dit ook voor css properties doen zoals ik [hier voor display flex doe](https://github.com/CountNick/browser-technologies-1920/blob/master/server/static/css/styles.css#L292). Als de browser geen flexbox ondersteund vallen deze elementen terug op float.
