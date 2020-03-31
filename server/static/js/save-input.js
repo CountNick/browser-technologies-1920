@@ -35,7 +35,7 @@ form.addEventListener('input', function(event){
     var numValid = 0;
 
     var answer = event.target
-    var parent = answer.parentElement.parentElement;
+    var parent = answer.parentNode.parentNode;
 
     localStorage.setItem(answer.name, answer.value)
 
@@ -90,7 +90,7 @@ sendButton.addEventListener('click', function(event){
 
     if(required[0].checked == false && required[1].checked == false && required[2].checked == false) {
             event.preventDefault()
-            filledInWrongly(required[0].parentElement.parentElement)
+            filledInWrongly(required[0].parentNode.parentNode)
             required[0].scrollIntoView({behavior: "smooth", block: "end"})
 
     }
@@ -106,14 +106,14 @@ if(localStorage.studentAchtergrond){
         studentAchtergrond[0].checked = true
         progressBar.value += 20
         // studentAchtergrond[0].parentElement.parentElement.style['background-color'] = 'seagreen'
-        filledInCorrectly(studentAchtergrond[0].parentElement.parentElement)
+        filledInCorrectly(studentAchtergrond[0].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
     if(localStorage.studentAchtergrond == 'geen CMD'){
         studentAchtergrond[1].checked = true
         progressBar.value += 20
-        filledInCorrectly(studentAchtergrond[1].parentElement.parentElement)
+        filledInCorrectly(studentAchtergrond[1].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
@@ -124,21 +124,21 @@ if(localStorage.bevalt){
     if(localStorage.bevalt == 'goed te doen'){
         bevalt[0].checked = true
         progressBar.value += 20
-        filledInCorrectly(bevalt[0].parentElement.parentElement)
+        filledInCorrectly(bevalt[0].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
     if(localStorage.bevalt == 'zwaar'){
         bevalt[1].checked = true
         progressBar.value += 20
-        filledInCorrectly(bevalt[1].parentElement.parentElement)
+        filledInCorrectly(bevalt[1].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
     if(localStorage.bevalt == 'niet te doen'){
         bevalt[2].checked = true
         progressBar.value += 20
-        filledInCorrectly(bevalt[2].parentElement.parentElement)
+        filledInCorrectly(bevalt[2].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
@@ -148,21 +148,21 @@ if(localStorage.geslacht){
     if(localStorage.geslacht == 'man'){
         geslacht[0].checked = true
         progressBar.value += 20
-        filledInCorrectly(geslacht[0].parentElement.parentElement)
+        filledInCorrectly(geslacht[0].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
     if(localStorage.geslacht == 'vrouw'){
         geslacht[1].checked = true
         progressBar.value += 20
-        filledInCorrectly(geslacht[1].parentElement.parentElement)
+        filledInCorrectly(geslacht[1].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
     if(localStorage.geslacht == 'anders'){
         geslacht[2].checked = true
         progressBar.value += 20
-        filledInCorrectly(geslacht[2].parentElement.parentElement)
+        filledInCorrectly(geslacht[2].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
@@ -173,14 +173,14 @@ if(localStorage.voorkennis){
     if(localStorage.voorkennis == 'wel voorkennis'){
         voorkennis[0].checked = true
         progressBar.value += 20
-        filledInCorrectly(voorkennis[0].parentElement.parentElement)
+        filledInCorrectly(voorkennis[0].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
     if(localStorage.voorkennis == 'geen voorkennis'){
         voorkennis[1].checked = true
         progressBar.value += 20
-        filledInCorrectly(voorkennis[1].parentElement.parentElement)
+        filledInCorrectly(voorkennis[1].parentNode.parentNode)
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
@@ -188,25 +188,25 @@ if(localStorage.voorkennis){
 
 if(localStorage.geen){
     checkboxes[0].checked = true
-    filledInCorrectly(checkboxes[0].parentElement.parentElement)
+    filledInCorrectly(checkboxes[0].parentNode.parentNode)
     var checked = document.querySelectorAll('input[type=checkbox]:checked')
     if(checked.length > 0 ) progressBar.value += 20
 }
 if(localStorage.zelfSchool){
     checkboxes[1].checked = true
-    filledInCorrectly(checkboxes[0].parentElement.parentElement)
+    filledInCorrectly(checkboxes[0].parentNode.parentNode)
     var checked = document.querySelectorAll('input[type=checkbox]:checked')
     if(checked.length > 0 ) progressBar.value += 20
 }
 if(localStorage.school){
     checkboxes[2].checked = true
-    filledInCorrectly(checkboxes[0].parentElement.parentElement)
+    filledInCorrectly(checkboxes[0].parentNode.parentNode)
     var checked = document.querySelectorAll('input[type=checkbox]:checked')
     if(checked.length > 0 ) progressBar.value += 20
 }
 if(localStorage.anders){
     checkboxes[3].checked = true
-    filledInCorrectly(checkboxes[0].parentElement.parentElement)
+    filledInCorrectly(checkboxes[0].parentNode.parentNode)
     var checked = document.querySelectorAll('input[type=checkbox]:checked')
     if(checked.length > 0 ) progressBar.value += 20
 }
