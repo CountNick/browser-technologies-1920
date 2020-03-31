@@ -6,13 +6,13 @@
 
 ## Inhoudsopgave
 
-* ### [Inleiding]()
-* ### [Core functionaliteiten]()
-* ### [Wireflow]()
-* ### [Progressive enhancement]()
-* ### [Onderzoek]()
-* ### [Feature test]()
-* ### [Conclusie]()
+* ### [Inleiding](https://github.com/CountNick/browser-technologies-1920#inleiding-1)
+* ### [Core functionaliteiten](https://github.com/CountNick/browser-technologies-1920#core-functionaliteiten-1)
+* ### [Wireflow](https://github.com/CountNick/browser-technologies-1920#wireflow-1)
+* ### [Progressive enhancement](https://github.com/CountNick/browser-technologies-1920#progressive-enhancement-1)
+* ### [Onderzoek](https://github.com/CountNick/browser-technologies-1920#onderzoek-1)
+* ### [Feature test](https://github.com/CountNick/browser-technologies-1920#feature-test-1)
+* ### [Conclusie](https://github.com/CountNick/browser-technologies-1920#conclusie-1)
 
 ## Inleiding
 
