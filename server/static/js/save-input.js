@@ -30,7 +30,7 @@ else{
 
 
 
-form.addEventListener('input', function(event){
+form.addEventListener('change', function(event){
     
     var numValid = 0;
 
