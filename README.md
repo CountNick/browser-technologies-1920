@@ -5,14 +5,11 @@
 ![headerimg](https://user-images.githubusercontent.com/47485018/78030734-d96cd900-7362-11ea-8f9a-4b930cbead35.png)
 
 
-
-## Opdracht 2 
-
 Gekozen case: Ik wil een enquete kunnen invullen over de minor Web Development, met verschillende antwoord mogelijkheden. Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
 
-## Anonieme enquete over de minor webdev
+## __Anonieme enquete over de minor webdev__
 
-### Core functionaliteiten: 
+## Core functionaliteiten: 
 
 Feature 1 - Ik wil een enquete kunnen invullen over de minor Web Development, met verschillende antwoord mogelijkheden.
 
@@ -24,12 +21,12 @@ Feature 2 - Als ik de enquete niet afkrijg, wil ik later weer verder gaan met wa
 
 * Ingevulde input waardes opslaan in de url van de gebruiker, en deze url aan de gerbuiker tonen zodat deze later verder ingevuld kan worden.
 
-### Wireflow
+## Wireflow
 
-#### V1
+### V1
 ![Wireflow v1](https://user-images.githubusercontent.com/47485018/76967426-b89a9180-6927-11ea-84a6-bdb6c1c0bb4b.jpeg)
 
-#### Notes over features en PE
+### Notes over features en PE
 Na het maken van de eerste schets schoten mij oplossingen te binnen over hoe ik de belangrijkste dingen en enhancements kon scheiden:
 
 __Core features:__
@@ -56,12 +53,12 @@ __Progressive enhancements:__
 
 Hier een eerste schets van de tweede versie van de vragenlijst: 
 
-#### V2
+### V2
 
 ![Wireflow v2](https://user-images.githubusercontent.com/47485018/76967495-d667f680-6927-11ea-987b-da67a346fc69.jpeg)
 
 
-### Progressive enhancement
+## Progressive enhancement
 
 * **Functional layer**
 
@@ -96,11 +93,9 @@ Alle lagen worden ondersteund in de volgende browsers:
 Verder is de website ontwikkelt op Chrome en zijn de meest features hiero ook op getest. Het is dus aan te raden om de website op chrome te draaien.
 
 
+## Onderzoek 
 
-
-### Onderzoek 
-
-#### Progress
+### Progress
 
 I kwam erachter dat er een HTML element bestaat dat gemaakt is om progressie te tonen:
 
@@ -135,7 +130,7 @@ progressBar.style.setProperty('--value', progressBar.value + '%');
 
 bron: [Animating Progress - Jonathan Snook](https://snook.ca/archives/html_and_css/animating-progress)
 
-# CSS
+### CSS
 
 #### Flexbox
 
@@ -155,7 +150,7 @@ header > section a{
 }
 ```
 
-#### REM 
+##### rem 
 
 Rem word nog niet door elke browser ondersteund [dit artikel](https://stackoverflow.com/questions/21854416/using-rems-with-a-pixel-fallback) bood hiervoor een oplossing: Als je eerste de waarde in pixels defineert en daar onder in rem, pakt de browser als rem bekent is rem en anders blijf het px : 
 
@@ -214,7 +209,7 @@ Array.prototype.forEach.call(geslacht, function(node){
 
 ```
 
-### input
+#### input event
 
 Op internet explorer werkte het input event niet. Na lang zoeken kwam ik erachter dat dit aan het input event lag. Dit bleek niet goed ondersteund te worden in ie. Maar het change event werkte wel:
 
@@ -248,7 +243,7 @@ else{
 
 ### Feature test
 
-## 8 feature test 
+
 
 __1. geen afbeeldingen__
 
@@ -285,3 +280,26 @@ __8. Local Storage__
 
     - Ook zonder Local Storage werkt de automatische opslag functie dus niet. Dus in dit geval is ook hier de fallback hetzelfde als in stap 7 en 8.
 
+### Conclusie
+
+* **Student kan de core functionaliteit van een use case doorgronden**
+
+De core functionaliteiten splits ik [hier](https://github.com/CountNick/browser-technologies-1920#core-functionaliteiten) op. Ik heb hierin een onderscheid gemaakt tussen core functionaliteiten en enhancements.
+
+* **Toegankelijkheid: De user experience is goed**
+
+Er worden verschillende vormen van feedback door het formulier heengegeven. Als een vraag isingevuld kleurt het vlak groen zodat de gebruiker dit weet. Ook word er in de header een balk getoond die de progressie aangeeft nav het aantal vragen dat is ingevuld. Op het moment dat een verplicht veld niet is ingevuld
+
+* **Readme: In de beschrijving van het project staat een probleemdefinitie, hoe het probleem is opgelost en een uitleg van de code.**
+
+hier uitleg
+
+* **Student kan uitleggen wat Progressive enhancement is.**
+* **Student laat zien hoe Progressive Enhancement toe te passen in Web Development**
+
+[Zie dit stukje in de readme](https://github.com/CountNick/browser-technologies-1920#progressive-enhancement)
+
+* **Student kan uitleggen wat Feature detection is.**
+* **Student laat zien hoe Feature Detection kan worden toegepast in Web Development**
+
+[Hier pas ik feature detection toe]()
