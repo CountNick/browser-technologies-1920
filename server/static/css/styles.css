@@ -12,9 +12,8 @@ header {
   box-shadow: 0 0 10px black;
 }
 
-header > section:first-of-type {
-  /* display: flex; */
-  display: table;
+header > section a{
+  float: left;
 }
 
 progress {
@@ -61,6 +60,10 @@ h1 {
   font-size: 2.5rem;
 }
 
+h3, h2{
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
 img {
   display: inline-block;
 }
@@ -68,7 +71,6 @@ img {
 label {
   z-index: 0;
   display: block;
-  width: 100%;
   font-size: 20px;
   font-size: 1.2rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -81,12 +83,17 @@ label {
   padding-top: 0.3rem;
 }
 
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-size: 1.2rem;
+}
+
 label.white {
   color: white;
 }
 
 form {
-  display: table;
   width: 70%;
   margin: 0 auto;
 }
@@ -160,7 +167,6 @@ input[type="submit"] {
   margin: 5px;
   border-style: solid;
   border-color: #ffffff;
-  width: 25%;
   border-style: none;
   padding: 16px;
   padding: 1rem;
@@ -275,6 +281,10 @@ label .checkmark:after {
   padding: 5px;
 }
 
+.formBtns input{
+  float: right;
+}
+
 .active {
   background-color: red;
 }
@@ -293,4 +303,41 @@ label .checkmark:after {
   header > section:first-of-type {
     display: flex;
   }
+}
+
+@media screen and (max-width: 400px) {
+  form {
+    width: 96%;
+  }
+
+  img{
+    width: 100px;
+    height: 100px;
+  }
+  
+  h1{
+    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  article{
+    padding-top: 160px;
+    padding-top: 10rem;
+  }
+
+  .answerCheck{
+    width: 83%;
+  }
+
+  h3{
+    font-size: 16px;
+    font-size: .8rem;
+  }
+  
+  h2{
+    font-size: 16px;
+    font-size: .9rem;
+  }
+
+
 }

@@ -84,15 +84,20 @@ The pleasurable version shows the user what his or her progression is in the for
 The user also gets feedback when a question gets filled in correctly or when a required field was not filled in:
 ![forgot to fill in: ](https://user-images.githubusercontent.com/47485018/77916029-bd046a00-7298-11ea-9051-8ee926152f1b.gif)
 
+Alle lagen worden ondersteund in de volgende browsers:
+
+* IE 9, 10, 11 en edge
+* Firefox
+* Opera
+* Brave
+* Chrome
+
+Verder is de website ontwikkelt op Chrome en zijn de meest features hiero ook op getest. Het is dus aan te raden om de website op chrome te draaien.
+
 
 
 
 ### Onderzoek 
-
-* Rem niet ondersteunde ie 9-10 
-* scrollIntoView smooth niet ondersteund ie en safari Ios
-
-
 
 #### Progress
 
@@ -133,7 +138,21 @@ bron: [Animating Progress - Jonathan Snook](https://snook.ca/archives/html_and_c
 
 #### Flexbox
 
-Schrijf hier iets over flexbox fallback
+Als flexbox niet ondersteund worden de knoppen onderaan het formulier met float aan de rechterkant geplaatst:
+
+```css
+.formBtns input{
+  float: right;
+}
+```
+
+Ook de header afbeelding word dan met float geplaatst::
+
+```css
+header > section a{
+  float: left;
+}
+```
 
 #### REM 
 
@@ -191,6 +210,39 @@ geslacht.forEach(function(item){
 Array.prototype.forEach.call(geslacht, function(node){
     if(node.checked == true) numValid++
 })
+
+```
+
+### input
+
+Op internet explorer werkte het input event niet. Na lang zoeken kwam ik erachter dat dit aan het input event lag. Dit bleek niet goed ondersteund te worden in ie. Maar het change event werkte wel:
+
+```js
+form.addEventListener('input', function(event){
+    ...
+}
+//became:
+form.addEventListener('change', function(event){
+    ...
+}
+```
+
+Ik heb voor de zekerheid ook parentElement veranderd omdat ik niet zeker wist of dit fout ging bij het selecteren van de een input veld
+
+### Feature detection
+
+Ik check of localStorage word ondersteund door de browser, als localstorage word ondersteund worden de save knop en link verwijdert:
+
+```js
+// check if local storage is available, if so remove the save button and link 
+if(window.localStorage){
+    saveButton.parentNode.removeChild(saveButton)
+    saveLink.parentNode.removeChild(saveLink)
+}
+else{
+    console.log("Local Storage not available :( ")
+}
+
 
 ```
 

@@ -39,8 +39,6 @@ form.addEventListener('change', function(event){
 
     localStorage.setItem(answer.name, answer.value)
 
-    console.log('Parent: ', parent)
-
     var checked = document.querySelectorAll('input[type=checkbox]:checked')
    
     filledInCorrectly(parent)
