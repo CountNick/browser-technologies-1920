@@ -201,7 +201,7 @@ input[type="checkbox"] {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: #dcdcdc;
   border-radius: 50%;
 }
 
@@ -212,7 +212,7 @@ input[type="checkbox"] {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: #dcdcdc;
 }
 
 label:hover > input[type="radio"] ~ .checkmark {

@@ -8,6 +8,7 @@ var studentAchtergrond = document.querySelectorAll('input[name=studentAchtergron
 var bevalt = document.querySelectorAll('input[name=bevalt]')
 var voorkennis = document.querySelectorAll('input[name=voorkennis]')
 var geslacht = document.querySelectorAll('input[name=geslacht]')
+var checkboxes = document.querySelectorAll('input[type=checkbox]')
 var required = document.querySelectorAll('[required]')
 // select the progress element
 var progressBar = document.querySelector('progress')
@@ -183,6 +184,31 @@ if(localStorage.voorkennis){
         progressBar.style.setProperty('--value', progressBar.value + '%');
     }
 
+}
+
+if(localStorage.geen){
+    checkboxes[0].checked = true
+    filledInCorrectly(checkboxes[0].parentElement.parentElement)
+    var checked = document.querySelectorAll('input[type=checkbox]:checked')
+    if(checked.length > 0 ) progressBar.value += 20
+}
+if(localStorage.zelfSchool){
+    checkboxes[1].checked = true
+    filledInCorrectly(checkboxes[0].parentElement.parentElement)
+    var checked = document.querySelectorAll('input[type=checkbox]:checked')
+    if(checked.length > 0 ) progressBar.value += 20
+}
+if(localStorage.school){
+    checkboxes[2].checked = true
+    filledInCorrectly(checkboxes[0].parentElement.parentElement)
+    var checked = document.querySelectorAll('input[type=checkbox]:checked')
+    if(checked.length > 0 ) progressBar.value += 20
+}
+if(localStorage.anders){
+    checkboxes[3].checked = true
+    filledInCorrectly(checkboxes[0].parentElement.parentElement)
+    var checked = document.querySelectorAll('input[type=checkbox]:checked')
+    if(checked.length > 0 ) progressBar.value += 20
 }
 
 
