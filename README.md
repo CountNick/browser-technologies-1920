@@ -62,18 +62,20 @@ Hier een eerste schets van de tweede versie van de vragenlijst:
 
 ### Progressive enhancement
 
-**Functional layer**
+* **Functional layer**
 
 ![functional](https://user-images.githubusercontent.com/47485018/77910796-056b5a00-7290-11ea-8bb7-f0c6cbe091e6.gif)
 
 De basislaag werkt nu zonder javascript en css. Gebruikers kunnen het formulier invullen en op de opslaan knop drukken, de link die gekopieeerd moet worden worde dan getoond. Ook kan de gebruiker het formulier verzenden.
 
-**Usable layer**
+* **Usable layer**
+
+De usable laag zorgt ervoor dat het formulier gestyled is. Er is nu ook feedback op het moment dat de gebruiker in de fieldset klikt. Ook krijgt de gebruiker de link die moet worden opgeslagen in een groen blok.
 
 ![Usable](https://user-images.githubusercontent.com/47485018/77913265-3ea5c900-7294-11ea-8d8d-a0a22e354e39.gif)
 
 
-**Pleasurable**
+* **Pleasurable**
 
 The pleasurable version shows the user what his or her progression is in the form through the progress element. The save option doesn't have to be clicked anymore in order to save the state of the form. This is now autmatically being taken care of through local storage: 
 
@@ -164,6 +166,19 @@ saveButton.parentNode.removeChild(saveButton)
 saveLink.parentNode.removeChild(saveLink)
 ```
 
+#### Arrow functions
+
+```js
+geslacht.forEach((item) => {
+    if(item.checked == true) numValid++
+})
+//became:
+geslacht.forEach(function(item){
+    if(item.checked == true) numValid++
+})
+
+```
+
 #### forEach
 
 Blijkbaar ondersteund [internet explorer forEach niet](https://developer.mozilla.org/nl/docs/Web/API/NodeList/forEach).[Uitleg](https://stackoverflow.com/questions/16053357/what-does-foreach-call-do-in-javascript) Dit was de oplossing hiervoor: 
@@ -179,4 +194,42 @@ Array.prototype.forEach.call(geslacht, function(node){
 
 ```
 
-#### Arrow functions
+### Feature test
+
+## 8 feature test 
+
+__1. geen afbeeldingen__
+
+    - Er zit 1 afbeelding in de pagina. Deze zit in de header. Als de gebruiker geen afbeeldingen kan laden laad de pagina een block element in met dezelfde height en width die het img element zou hebben met hierin een beschrijvende alt text. Door dit te doen breekt de header niet op het moment dat de afbeelding niet geladen kan worden.
+
+__2. Custom fonts uitzetten__
+
+    - Ik maak op alleen gebruik van websafefonts om dit probleem te voorkomen.
+
+__3. Kleur__
+
+    - Ik heb de pagina door checkmycolors.com heen gehaald. De enige issues die hieruit kwamen waren voor de afbeelding achtergrond kleur en de a tags die op deze afbeelding zit. Deze twee issues heb ik genegeerd omdat ik dit bewust zo heb gedaan:
+    
+![Schermafbeelding 2020-03-30 om 15 36 39](https://user-images.githubusercontent.com/47485018/77918673-816b9f00-729c-11ea-94c7-08b9e1fb8e16.png)
+
+
+__4. Muis/trackpad__
+
+    - De website werkt prima zonder muis of trackpad. De gebruiker kan door de pagina heentabben en een keuze maken met de spatiebalk. Als de gebruiker van keuze wil veranderen kan dit door gebruik avan de pijltjes toetsen.
+
+__5. Breedband internet__
+
+    - Na het zetten van de network throttling op slow 3G werd de website toch nog redelijk snel getoond. Het duurde alleen wel even voordat de header afbeelding getoond werd. Ook dit was verder geen probleem omdat deze een vaste height en width heeft.
+
+__6. Javascript uitzetten__
+
+    - De app werkt zonder javascript. Alleen moet de gebruiker wel zelf op de opslaan knop drukken, en de link handmatig kopiëren om zijn of haar voortgang op te kunnen slaan. Ook word de voortgang niet getoond in de progressbar.
+
+__7. Cookies niet accepteren__
+
+    - In het geval cookies niet geaccepteerd worden, is de fallback dat de gebruiker handmatig zijn of haar progressie op zal moeten slaan
+
+__8. Local Storage__
+
+    - Ook zonder Local Storage werkt de automatische opslag functie dus niet. Dus in dit geval is ook hier de fallback hetzelfde als in stap 7 en 8.
+
