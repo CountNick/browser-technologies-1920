@@ -2,7 +2,8 @@
 
 ## [Live demo](https://webdev-enquete.herokuapp.com/)
 
-![Schermafbeelding 2020-03-20 om 13 04 23](https://user-images.githubusercontent.com/47485018/77162064-684c3c80-6aab-11ea-9784-2d98f6666524.png)
+![headerimg](https://user-images.githubusercontent.com/47485018/78030734-d96cd900-7362-11ea-8f9a-4b930cbead35.png)
+
 
 
 ## Opdracht 2 
@@ -242,7 +243,6 @@ if(window.localStorage){
 else{
     console.log("Local Storage not available :( ")
 }
-
 
 ```
 
